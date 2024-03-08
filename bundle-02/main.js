@@ -11,6 +11,10 @@
 
 
 // ESERCIZIO 1
+//La funzione checkAge() valuta la variabile myAge e generare un messaggio basato sui creiteri impostati
+//Errori: message non può essere una costante ma una variabile poichè gli assegneremo valori variabili quindi è una let
+
+//VERSIONE CON ERRORI
 function checkAge() {
     const myAge = 32;
     const message = '';
@@ -23,12 +27,32 @@ function checkAge() {
 }
 checkAge();
 
+//VERSIONE CORRETTA
+function checkAge() {
+    const myAge = 32;
+    let message = '';
+
+    if (myAge < 18) {
+        message = `Sei troppo giovane! Hai ${myAge} anni!`;
+    } else {
+        message = 'Hai più di 18 anni!';
+    }
+}
+checkAge();
+
+
 // ESERCIZIO 2
+// La funzione definisce un array colors contenente cinque stringhe di nomi di colori
+// Errore di battitura lenght invece di length
+//Errore di battitura nel console.log degli apici
+
 function printColorsNumber() {
     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
     console.log(`Nella mia palette ci sono ${colors.lenght} colori!`);
 }
 printColorsNumber();
+
+
 
 
 // ESERCIZIO 3
